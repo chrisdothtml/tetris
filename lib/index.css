@@ -25,9 +25,9 @@ body {
 }
 
 .grid-vis .row .cell.cell-0 {
-  opacity: .4;
+  opacity: .2;
 }
 
 .grid-vis .row .cell:not(.cell-0) {
-  color: blue;
+  /* color: blue; */
 }
