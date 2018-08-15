@@ -17,8 +17,16 @@ body {
 }
 
 body {
+  align-items: center;
   background-color: #000;
   color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
 }
 
 .grid-vis {
@@ -73,4 +81,10 @@ body {
 
 .grid-vis .row .cell.cell-7 {
   color: #3498db;
+}
+
+.info-pane {
+  align-items: center;
+  display: flex;
+  height: 50px;
 }
