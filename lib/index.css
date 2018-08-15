@@ -16,18 +16,61 @@ body {
   height: 100%;
 }
 
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.grid-vis {
+  border: 1px solid white;
+  font-size: 25px;
+}
+
 .grid-vis .row {
   display: flex;
 }
 
 .grid-vis .row .cell {
-  padding: 5px;
+  background-color: currentColor;
+  border-style: solid;
+  border-width: 1px;
+  line-height: 1;
+  width: 1.1em;
 }
 
 .grid-vis .row .cell.cell-0 {
-  opacity: .2;
+  border-color: rgba(254, 254, 254, 0.1);
+  color: black;
 }
 
 .grid-vis .row .cell:not(.cell-0) {
-  /* color: blue; */
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.grid-vis .row .cell.cell-1 {
+  color: #e74c3c;
+}
+
+.grid-vis .row .cell.cell-2 {
+  color: #9b59b6;
+}
+
+.grid-vis .row .cell.cell-3 {
+  color: #e67e22;
+}
+
+.grid-vis .row .cell.cell-4 {
+  color: white;
+}
+
+.grid-vis .row .cell.cell-5 {
+  color: #2ecc71;
+}
+
+.grid-vis .row .cell.cell-6 {
+  color: #1abc9c;
+}
+
+.grid-vis .row .cell.cell-7 {
+  color: #3498db;
 }
