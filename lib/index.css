@@ -29,10 +29,17 @@ body {
 
 body {
   align-items: center;
-  background-color: #000;
-  color: #fff;
   display: flex;
   justify-content: center;
+}
+
+body:not(.pretty) {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+body.pretty {
+  background-color: #000;
+  color: #fff;
 }
 
 .root {
@@ -41,8 +48,11 @@ body {
 }
 
 .grid-vis {
-  border: 1px solid white;
   font-size: 25px;
+}
+
+body.pretty .grid-vis {
+  border: 1px solid white;
 }
 
 .grid-vis .row {
@@ -50,19 +60,30 @@ body {
 }
 
 .grid-vis .row .cell {
-  background-color: currentColor;
   border-style: solid;
   border-width: 1px;
   line-height: 1;
+  text-align: center;
   width: 1.1em;
 }
 
+body:not(.pretty) .grid-vis .row .cell {
+  border-color: transparent;
+}
+
+body.pretty .grid-vis .row .cell {
+  background-color: currentColor;
+}
+
 .grid-vis .row .cell.type-0 {
-  border-color: rgba(255, 255, 255, 0.1);
   color: black;
 }
 
-.grid-vis .row .cell:not(.type-0) {
+body.pretty .grid-vis .row .cell.type-0 {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.pretty .grid-vis .row .cell:not(.type-0) {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
