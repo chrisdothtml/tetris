@@ -42,6 +42,7 @@ body.pretty {
 
 body.pretty .grid-vis {
   border: 1px solid white;
+  user-select: none;
 }
 
 .grid-vis .row {
