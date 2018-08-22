@@ -18,17 +18,10 @@ body {
 
 body {
   align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-body:not(.pretty) {
-  background-color: rgba(0, 0, 0, .1);
-}
-
-body.pretty {
   background-color: #000;
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .root {
@@ -37,11 +30,8 @@ body.pretty {
 }
 
 .grid-vis {
-  font-size: 25px;
-}
-
-body.pretty .grid-vis {
   border: 1px solid white;
+  font-size: 25px;
   user-select: none;
 }
 
@@ -50,26 +40,22 @@ body.pretty .grid-vis {
 }
 
 .grid-vis .row .cell {
+  --border-width: 1px;
+  background-color: currentColor;
   border-style: solid;
-  border-width: 1px;
+  border-width: var(--border-width);
+  /* add border-width because of box-sizing */
+  height: calc(1em + (var(--border-width) * 2));
   line-height: 1;
   text-align: center;
   width: 1.1em;
 }
 
-body:not(.pretty) .grid-vis .row .cell {
-  border-color: transparent;
-}
-
-body.pretty .grid-vis .row .cell {
-  background-color: currentColor;
-}
-
-body.pretty .grid-vis .row .cell.type-0 {
+body .grid-vis .row .cell.type-0 {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-body.pretty .grid-vis .row .cell:not(.type-0) {
+body .grid-vis .row .cell:not(.type-0) {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
