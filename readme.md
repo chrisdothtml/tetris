@@ -1,4 +1,6 @@
-# Tetris
+# Tetris AI
+
+> Training a neural network to play tetris
 
 ## Run locally
 
