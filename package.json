@@ -1,13 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "lint": "standard --verbose | snazzy",
-    "start": "serve"
+    "lint": "standard -v | snazzy",
+    "start": "serve",
+    "test": "ava -v"
+  },
+  "ava": {
+    "require": "esm"
   },
   "dependencies": {
     "serve": "^9.4.2"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
+    "esm": "^3.0.80",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1"
   }
