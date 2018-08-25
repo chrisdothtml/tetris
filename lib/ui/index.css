@@ -27,6 +27,16 @@ body {
 .root {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.game-over-modal {
+  background-color: rgba(0, 0, 0, .4);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .grid-vis {
@@ -63,7 +73,7 @@ body .grid-vis .row .cell:not(.type-0) {
   align-items: flex-end;
   display: flex;
   font-family: 'Press Start 2P', cursive;
-  height: 65px;
+  height: 80px;
   justify-content: space-between;
   padding: 0 10px 10px;
 }
