@@ -1,5 +1,5 @@
 import test from 'ava'
-import {
+import getGridHeuristics, {
   countGridHoles,
   getGridHeight,
   getGridRoughness,
@@ -90,4 +90,19 @@ test('getYPeaks', t => {
 
   t.deepEqual(getYPeaks(empty), [2, 2, 2])
   t.deepEqual(getYPeaks(full), [3, 0, 1])
+})
+
+test('getGridHeuristics', t => {
+  const grid = [
+    [0, 0, 3, 0],
+    [0, 0, 6, 0],
+    [0, 2, 0, 0],
+    [4, 5, 6, 0]
+  ]
+
+  t.deepEqual(getGridHeuristics(grid), {
+    height: 4,
+    holes: 1,
+    roughness: 6
+  })
 })
