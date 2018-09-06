@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "esm": "^3.0.80",
+    "esm": "^3.0.82",
+    "performance-now": "^2.1.0",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1"
   }
