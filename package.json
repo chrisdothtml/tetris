@@ -1,15 +1,25 @@
 {
   "private": true,
   "scripts": {
+    "build-ui": "webpack-cli lib/ui/index.js -r esm",
     "lint": "standard -v | snazzy",
     "start": "serve",
-    "test": "ava -v"
+    "test": "ava -v",
+    "train": "node -r esm --experimental-worker lib/ai/index.js"
   },
   "ava": {
     "require": "esm"
   },
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
   "dependencies": {
     "lodash-es": "^4.17.10",
+    "p5": "^0.7.2",
+    "ractive": "^0.10.9",
+    "seedrandom": "^2.4.4",
     "serve": "^10.0.0",
     "synaptic": "^1.1.4"
   },
@@ -18,6 +28,8 @@
     "esm": "^3.0.82",
     "performance-now": "^2.1.0",
     "snazzy": "^7.1.1",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
   }
 }

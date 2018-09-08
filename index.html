@@ -11,11 +11,7 @@
   <body>
     <div id="root" class="root"></div>
 
-    <script>
-      // for loading cjs deps via `import`
-      window.module = { exports: {} }
-      window.exports = module.exports
-    </script>
-    <script type="module" src="./lib/ui/index.js"></script>
+    <script src="./dist/vendors~main.js"></script>
+    <script src="./dist/main.js"></script>
   </body>
 </html>

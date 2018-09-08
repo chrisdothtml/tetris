@@ -1,3 +1,3 @@
+# ignore for now until travis gets setup for github pages
+dist
 node_modules
-!node_modules/lodash-es/debounce.js
-!node_modules/lodash-es/memoize.js
